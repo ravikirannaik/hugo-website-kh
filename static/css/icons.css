@@ -1,0 +1,39 @@
+/* Social icon SVGs in about page */
+.icon-svg {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+/* About page social links row */
+.posts .logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.posts .logo-wrapper a {
+  font-size: 1.4rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.posts .logo-wrapper a:hover {
+  color: #c05b4d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .posts .logo-wrapper a {
+    color: #aaa;
+  }
+  .posts .logo-wrapper a:hover {
+    color: #e8836b;
+  }
+  .icon-svg {
+    filter: invert(0.7);
+  }
+}

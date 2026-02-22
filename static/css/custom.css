@@ -1,0 +1,122 @@
+/* Custom styles for academic site layout */
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Homepage featured publications list */
+.fp-tightlist {
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+ul.fp-tightlist li::before {
+  content: "\00B7\00A0\00A0";
+  margin-left: -1em;
+}
+
+/* Publication lists on /publications page */
+.publication {
+  padding-left: .25em;
+}
+
+ul.publication {
+  width: 100%;
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+ul.publication li {
+  padding-left: 0;
+  list-style: none;
+  text-indent: -1.75em;
+  margin: .33em 0 0 1.5em;
+}
+
+/* Small caps for "pdf", "abstract", "overview" links */
+.scp {
+  font-variant: small-caps;
+  font-style: normal;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+/* Section content wrapper (.posts used in publications, teaching, resources, about) */
+.posts {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.posts figure.center {
+  text-align: center;
+}
+
+.posts figure figcaption p {
+  color: #4a4a4a;
+  font-size: .8rem;
+}
+
+.posts h3 {
+  margin-top: 1.5em;
+  margin-bottom: -.5em;
+}
+
+/* Archive sections on homepage */
+.archive {
+  margin: 2em 0;
+  max-width: 650px;
+}
+
+.archive .archive-post-time {
+  margin-right: 10px;
+  color: #8a8a8a;
+}
+
+.archive .archive-post-link {
+  color: #0047ab;
+}
+
+.archive .archive-post-link:hover {
+  color: #003278;
+}
+
+/* Page header */
+.post-header .post-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .posts {
+    border-bottom-color: #444;
+  }
+
+  .posts figure figcaption p {
+    color: #aaa;
+  }
+
+  .archive .archive-post-time {
+    color: #999;
+  }
+
+  .archive .archive-post-link {
+    color: #6ba3d6;
+  }
+
+  .archive .archive-post-link:hover {
+    color: #8ec0ef;
+  }
+
+  ul.publication li {
+    color: #ccc;
+  }
+}

@@ -1,0 +1,158 @@
+MetaDataFormat = "yaml"
+baseurl = "https://ravikirannaik.github.io/"
+title = "Ravikiran Naik"
+rssLimit = 20
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+languageCode = "en"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+enableEmoji = false
+theme = ["hugo-video", "even"]
+
+# Syntax highlighting by Chroma
+pygmentsOptions = "linenos=table"
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+highlightInClient = false
+
+hasCJKLanguage = false
+
+pagination.PagerSize = 20
+
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+
+[[module.mounts]]
+source = 'static'
+target = 'assets'
+
+[params.render_hooks.image]
+errorLevel = 'error'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+
+
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[services.rss]
+  limit = 20
+
+
+
+[menu]
+
+  [[menu.main]]
+  name = "Publications"
+  url = "/publications"
+  weight = 2.0
+
+  [[menu.main]]
+  name = "Teaching"
+  url = "/teaching"
+  weight = 3.0
+
+  [[menu.main]]
+  name = "Resources"
+  url = "/resources"
+  weight = 4.0
+
+  [[menu.main]]
+  name = "Blog"
+  url = "/blog"
+  weight = 6.0
+
+[permalinks]
+blog = "/blog/archives/:year/:month/:day/:slug"
+
+[params]
+  version = "4.x"
+  debug = false
+
+  since = "2009"
+  logoTitle = "ravikiran naik"
+  keywords = ["economics", "labor economics", "platform work", "India"]
+  description = "Academic website of Dr. Ravikiran Naik, Assistant Professor of Economics at FLAME University, Pune, India."
+
+  archivePaginate = 100
+  blogPaginate = 100
+
+  showArchiveCount = false
+
+  dateFormatToUse = "January 2, 2006"
+
+  moreMeta = false
+
+  highlightInClient = false
+
+  toc = false
+  autoCollapseToc = false
+  fancybox = true
+
+  # mathjax
+  mathjax = true
+  mathjaxEnableSingleDollar = true
+  mathjaxEnableAutoNumber = false
+  mathjaxUseLocalFiles = false
+
+  postMetaInFooter = false
+  linkToMarkDown = false
+  contentCopyright = ''
+
+  baiduPush = false
+
+  customCSS = ['dark.css','codeblock.css', 'footnotes.css', 'fwfig.css', 'icons.css', 'custom.css']
+  customJS = ['codeblock.js', 'sidenotes.js']
+
+  uglyURLs = false
+
+  [params.publicCDN]
+    enable = true
+    jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>'
+    slideout = '<script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>'
+    fancyboxJS = '<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>'
+    fancyboxCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />'
+
+
+  [params.social]
+    g-github = "https://github.com/ravikirannaik"
+
+   [params.author]
+      name = "Ravikiran Naik"
+      email = "ravikiran.naik@flame.edu.in"
+
+
+
+# See https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+
+[outputFormats]
+    [outputFormats.RSS]
+        baseName = "index"
+
+[outputs]
+ home = ["HTML", "RSS"]
+ page = ["HTML"]
+ section = ["HTML", "RSS"]
+ term = ["HTML", "RSS"]

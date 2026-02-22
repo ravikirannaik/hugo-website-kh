@@ -1,0 +1,44 @@
+{{- define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" }}
+
+{{ $baseurl := .Site.BaseURL }}
+
+<div id="content" class="posts">
+
+    <!-- post-header -->
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+
+<p>I am an Assistant Professor of Economics at <a
+href="https://www.flame.edu.in">FLAME University</a>, Pune, India. My
+research focuses on applied labour economics, platform/gig work, and
+intergenerational inequality. I investigate how platform workers navigate
+precarity in global digital labor markets, with a focus on skill
+specialization, wage determination, and informal employment in the
+Global South.</p>
+
+<!-- Uncomment when photo is available:
+<figure><img src="/files/misc/profile.jpg" title="Ravikiran Naik" ></figure>
+-->
+
+<p>Most of my <a href="/publications">publications and working
+papers</a> are available on this site, along with information about <a
+href="/teaching">courses</a> I teach, various <a href="/resources">research projects,
+data, and related resources</a>, and some <a
+href="/blog">occasional writing</a>. My <a href="/cv.pdf">Curriculum
+Vitae</a> has more detail, if you need it.</p>
+
+<center>
+<div class="logo-wrapper">
+<a href="mailto:ravikiran.naik@flame.edu.in" class="iconfont icon-email" title="email"></a>
+<a href="https://github.com/ravikirannaik" class="logo" title="GitHub"><img class="icon-svg" src="/icons/github.svg"></a>
+<a href="https://scholar.google.com/citations?user=nkOOeKoAAAAJ&hl=en" class="logo" title="Google Scholar"><img class="icon-svg" src="/icons/googlescholar.svg"></a>
+<a href="https://orcid.org/0000-0002-0146-3918" class="logo" title="ORCID"><img class="icon-svg" src="/icons/orcid.svg"></a>
+<a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+</center>
+
+</div>
+{{ end }}

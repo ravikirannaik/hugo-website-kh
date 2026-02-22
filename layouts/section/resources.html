@@ -1,0 +1,47 @@
+{{- define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" }}
+
+{{ $baseurl := .Site.BaseURL }}
+
+ <div id="content" class="posts">
+
+    <!-- post-header -->
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+
+<p><em>Research projects, data, and tools related to my work on labour economics, platform work, and inequality in India.</em></p>
+
+<h3>Platform Workers in India: Wages, Skills, and Working Conditions</h3>
+
+<p>This is a large-scale quantitative research project funded by the <strong>Indian Council of Social Science Research (ICSSR)</strong>, 2022&ndash;ongoing. As Co-Project Director, I am studying how platform workers navigate precarity in India&rsquo;s gig economy.</p>
+
+<ul>
+<li><strong>Field sites:</strong> Ahmedabad, Pune</li>
+<li><strong>Platforms studied:</strong> Zomato, Swiggy, Urban Company, Uber</li>
+<li><strong>Sample size:</strong> 2,000+ platform workers</li>
+</ul>
+
+<p>Key research questions:</p>
+<ul>
+<li>How do platform workers&rsquo; skills and specialization patterns affect earnings?</li>
+<li>What determines wage differentials across heterogeneous platform types?</li>
+<li>How do workers navigate algorithmic management and exercise agency?</li>
+<li>What role does informality play in shaping platform work outcomes?</li>
+</ul>
+
+<p>Methods include econometric analysis (wage determination, instrumental variables), large-scale primary survey data, and cross-platform comparative analysis.</p>
+
+<br />
+
+<h3>Data and Code</h3>
+
+<p>&rarr; <a href="https://github.com/ravikirannaik">GitHub Repositories</a> &mdash; code and data for research projects.</p>
+
+<p>&rarr; <a href="https://orcid.org/0000-0002-0146-3918">ORCID Profile</a> &mdash; full list of publications with persistent identifiers.</p>
+
+<p>&rarr; <a href="https://scholar.google.com/citations?user=nkOOeKoAAAAJ&hl=en">Google Scholar</a> &mdash; citation metrics and publication list.</p>
+
+</div>
+{{- end }}

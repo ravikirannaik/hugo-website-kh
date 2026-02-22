@@ -1,0 +1,54 @@
+{{- define "content" -}}
+
+<p>I am an Assistant Professor of <a href="https://www.flame.edu.in/faculty/ravikiran-naik">Economics</a> at <a href="https://www.flame.edu.in">FLAME University</a>, Pune, India. My research focuses on applied labour economics, platform/gig work, and intergenerational inequality. &rarr; <a href="about/"><em>More about me.</em></a>
+</p>
+<section id="pubs" class="archive">
+
+<h1>Some of my Work</h1>
+<ul class="fp-tightlist">
+  {{ range (where .Site.RegularPages "Section" "in" (slice "publications")) }}
+
+  {{ if .Params.fave }}
+
+  {{ if .Params.citation }}
+  <li>
+    {{ .Params.citation | safeHTML }}
+    {{ if isset .Params "file" }} &middot;  <a class="scp" href="{{.Site.BaseURL}}files/papers/{{ .Params.file }}">pdf</a>{{ end }}
+    {{ if isset .Params "overview" }} &middot; <a class="scp" href="{{ .Permalink }}">overview</a> {{ end }}
+  </li>
+
+  {{ else }}
+
+    <li>
+      <a href="{{ .Permalink }}"> {{ .Params.title | safeHTML }} </a>
+    </li>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+
+</ul>
+</section>
+
+
+<section id="posts" class="archive">
+<h1>Recent Writing</h1>
+  {{ $recent := first 10 ((where .Site.RegularPages.ByDate "Section" "blog").Reverse) }}
+  {{ if $recent }}
+  {{ range $index, $page := $recent }}
+
+  <span class="archive-post-time">
+        <em>{{ $page.Date.Format "January 2" }}</em> &nbsp;
+    </span>
+    <span class="post-title">
+        <a href="{{ $page.RelPermalink }}" class="archive-post-link">
+            {{ $page.Title }}
+        </a>
+        </span>{{ if ne (add $index 1) (len $recent) }} &middot;{{ end }}
+        {{ end }}
+  {{ else }}
+  <p><em>Coming soon.</em></p>
+  {{ end }}
+        </section>
+
+
+{{- end -}}
